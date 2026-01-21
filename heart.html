@@ -1,0 +1,67 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .filled{color:red}
+    </style>
+</head>
+<body>
+    <ul class="item-list">
+        <li> Thor <button class ="favourite item">&#9825</button></li><br>
+    <li>Caption America <button class = "favourite item ">&#9825</button></li><br>
+    <li>Iron Man <button class = "favourite item ">&#9825</button></li><br>
+    </ul>
+
+
+    <script>
+        let clicked = document.querySelector('.favourite item')
+
+        function color_change(){
+            clicked.classList.toggle('filled')
+        }
+        clicked.addEventListener('click',color_change)
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <style>
+        .filled{
+            color: #e53535;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <ul class="item-list">
+        <li>Captain America :  <button class="favorite-item">&#9825</button> </li><br>
+        <li>Thor :  <button class="favorite-item">&#9825</button> </li><br>
+        <li>Iron Man  :<button class="favorite-item">&#9825</button> </li><br>
+    </ul>
+
+    <script>
+        let clicked = document.querySelectorAll('.favorite-item')
+
+        clicked.forEach((btn) => {
+            btn.addEventListener('click', function(){
+                this.classList.toggle('filled')
+
+                if (this.classList.contains('filled')){
+                    this.innerHTML = '&#9829'
+                }else{
+                    this.innerHTML = '&#9825'
+                }
+                })
+            })
+
+    </script>
+</body>
+</html>
